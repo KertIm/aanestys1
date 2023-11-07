@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(84, 80, 88);
+    display: grid;
+    place-items: center;
+    margin-top: 30px;
+}

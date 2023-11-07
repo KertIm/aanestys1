@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="./login.js"></script>
+    
+    <div class="container">
+      <h1>Kirjaudu sisään</h1>
+      <form name="form" onsubmit="validateForm()" id="form"></form>
+
+        <label for="username">Käyttäjänimi</label>
+        <input type="text" id="username" />
+        <!--<span id="username" style="color: red;"></span>
+        <span id="username1" style="color: green;"></span>-->
+
+        <label for="password">Salasana</label>
+        <input type="password" id="password" />
+        <!--<span id="password" style="color: red;"></span>
+        <span id="password1" style="color: green;"></span> -->
+
+        <!-- <input type="submit" class="login-btn" value="Login" />-->
+        <input id="send" type="submit" value="Kirjaudu sisään" onclick="validateForm()" /> 
+      </form>
+    </div>
+    
+  </body>
+</html>
