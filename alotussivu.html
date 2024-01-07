@@ -1,17 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style1.css" />
 </head>
+
 <body>
-    <h1>Äänestykset</h1>
+    <script src="./logout.js"></script>
+    <script src="./script.js"></script>
+
+    <h1 id="name">Äänestykset</h1>
+    <input id="KUlos" type="submit" value="Kirjaudu ulos" onclick="KUlos()" />
     <!--käyttäjä    selaa äänestyksiä       valitse äänestys ja katso tilanne   -   valitse äänestys ja äänestä-->
-      
-    <!--admin
-    <button type="button">Lisää äänestys</button>
-    <button type="button">Poista äänestyksiä</button>-->
+
+    <!--admin-->
+    <div id="valinnat">
+        <button id="lisaa" type="button" onclick="avaa()">Lisää äänestys</button>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <button id="sulje" type="button" onclick="sulje()">X</button>
+                <p id="teksti">Äänestys:</p><br>
+
+                <input type="text" placeholder="Äänestys" id="aanestys"><br>
+
+                <button id="lisaa2" type="button" onclick="lisaa()">Lisää äänestys</button>
+            </div>
+
+        </div>
+
+        <button id="poista" type="button" onclick="poista()">Poista äänestyksiä</button>
+        
+    </div>
+    <div id="content">  <!--äänestykset ku on lisätty, muuten piilota-->
+        <!--nimi ja äänet--- ehkä lisatietoja-->
+        
+        <span id="teksti1"></span><br>
+        <p>Äänet: <span id="teksti2">0</span></p>
+        <button id="vote" type="button" onclick="vote()">Äänestä</button>
+    </div>
+
+
+    
 </body>
+
 </html>

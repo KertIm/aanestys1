@@ -1,12 +1,156 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Climate+Crisis&family=Josefin+Sans:ital,wght@1,200&display=swap');
+:root {
+    --dark: #464747;
+    --text: #993871;
+    --shadow: rgb(114 4 68);
+    --bg: rgb(76, 72, 82);
+    --box: #201f1f;
+    --white: #ffffff;
+    --cont: #807676;
+}
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-body{
-    background-color: rgb(84, 80, 88);
+body {
+    background-color: var(--bg);
     display: grid;
     place-items: center;
-    margin-top: 30px;
+    margin: auto;
+}
+#name{
+    text-shadow: 4px 4px var(--shadow); 
+    font-size: 60px;   
+    font-family: 'Anton', sans-serif;
+    margin-top: 50px;
+}
+#valinnat {
+    margin-top: 40px;
+}
+#lisaa,
+#lisaa2 {
+    cursor: pointer;
+    text-align: center;
+    background: var(--box);
+    color: var(--text);
+    font-size: 22px;
+    font-family: 'Anton', sans-serif;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 18px;
+    border-color: var(--text);
+    cursor: pointer;
+    margin-right: 40px;
+}
+#poista {
+    cursor: pointer;
+    text-align: center;
+    background: var(--box);
+    color: var(--text);
+    font-size: 22px;
+    font-family: 'Anton', sans-serif;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 18px;
+    border-color: var(--text);
+    cursor: pointer;
+}
+#KUlos {
+    cursor: pointer;
+    text-align: center;
+    background: var(--box);
+    color: var(--text);
+    font-size: 18px;
+    font-family: 'Anton', sans-serif;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 18px;
+    border-color: var(--text);
+    cursor: pointer;
+    margin-left: 80%;
+    margin-top: -150px;
+}
+#vote{
+    cursor: pointer;
+    text-align: center;
+    background: var(--box);
+    color: var(--text);
+    font-size: 16px;
+    font-family: 'Anton', sans-serif;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 18px;
+    border-color: var(--text);
+    cursor: pointer;
+    margin-top: 10px;
+}
+#content {  /*piilota alussa*/
+    background-color: var(--cont);
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 100px;
+    padding: 25px 50px 25px 50px;  /*top,right,bottom,left*/
+    display: none;
+    display: grid;
+    place-items: center;
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* Modal Content */
+.modal-content {
+    background-color: var(--dark);
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    display: grid;
+    place-items: center;
+}
+/* The Close Button - */
+#sulje {
+    background-color: var(--dark);
+    border: none;
+    color: var(--text);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.sulje:hover,
+.sulje:focus {
+    color: #000;
+    text-decoration: none;
+}
+#teksti{
+    font-size: 30px;
+    text-align: center;
+}
+#aanestys{
+    margin-bottom: 10px;
+}
+#lisaa2{
+    margin-top: 10px;
+    margin-left: 35px;
 }
