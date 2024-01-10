@@ -76,7 +76,7 @@ body {
     border-color: var(--text);
     cursor: pointer;
     margin-left: 80%;
-    margin-top: -150px;
+    margin-top: -200px;
 }
 #vote{
     cursor: pointer;
@@ -153,4 +153,31 @@ body {
 #lisaa2{
     margin-top: 10px;
     margin-left: 35px;
+}
+@media (max-width: 450px) {
+	#name {
+	  font-size: 45px; 
+	}
+    #KUlos {
+        margin-top: -180px;
+        margin-left: 55%;
+    }
+    #valinnat {
+        margin-left: 50px;
+    }
+    #lisaa2 {
+        font-size: 11px;
+    }
+    #teksti {
+        font-size: 20px;
+    }
+    #lisaa {
+        font-size: 18px;
+    }
+    #poista {
+        font-size: 18px;
+    }
+    #KUlos {
+        font-size: 12px;
+    }
 }

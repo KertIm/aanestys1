@@ -15,20 +15,27 @@ function sulje() {
 
 function lisaa() {
     var uusi = document.getElementById("aanestys").value;
-    if(uusi == "") {
-        
+    if (uusi == "") {
+
     } else {
-    list.push(aanestys);
+        list.push(aanestys);
 
-    sulje();
-    
-    var nayta = document.getElementById("content");
+        sulje();
 
-    nayta.style.display = "block";
-    
-    document.getElementById("teksti1").innerHTML = (uusi);
+        var nayta = document.getElementById("content");
+
+        
+
+        for (var i = 0; i < list.length; i++) {
+            //document.getElementById("teksti1").innerHTML = (uusi);
+            
+            nayta.style.display = "block";
+            var one = list[i];
+            document.getElementById("teksti1").innerHTML += one;
+            //näytä äänet
+        }
     }
-    
+
 }
 
 
@@ -37,6 +44,6 @@ function vote() {
 }
 
 function poista() {         //later
-    
+
 }
 
