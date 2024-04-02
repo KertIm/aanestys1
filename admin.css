@@ -28,6 +28,7 @@ body {
 }
 #valinnat {
     margin-top: 40px;
+    text-align: center;
 }
 #lisaa,
 #lisaa2 {
@@ -100,9 +101,10 @@ body {
     text-align: center;
     margin-top: 100px;
     padding: 25px 50px 25px 50px;  /*top,right,bottom,left*/
-    display: none;
     display: grid;
     place-items: center;
+    display: none;
+    
 }
 /* The Modal (background) */
 .modal {
@@ -176,6 +178,7 @@ body {
     }
     #poista {
         font-size: 18px;
+        margin-top: 10px;
     }
     #KUlos {
         font-size: 12px;

@@ -1,12 +1,10 @@
-var list = [];
-var aanet = [];//laita samaan listaan?
+const votes = []
 
 function avaa() {
     var modal = document.getElementById("myModal");
 
     modal.style.display = "block";
 }
-
 function sulje() {
     var modal = document.getElementById("myModal");
 
@@ -14,36 +12,36 @@ function sulje() {
 }
 
 function lisaa() {
-    var uusi = document.getElementById("aanestys").value;
-    if (uusi == "") {
+    var nimi = document.getElementById("aanestys").value;
+    var vaihto1 = document.getElementById("vaihto1").value;
+    var vaihto2 = document.getElementById("vaihto2").value;
 
-    } else {
-        list.push(aanestys);
-
-        sulje();
-
-        var nayta = document.getElementById("content");
-
-        
-
-        for (var i = 0; i < list.length; i++) {
-            //document.getElementById("teksti1").innerHTML = (uusi);
-            
-            nayta.style.display = "block";
-            var one = list[i];
-            document.getElementById("teksti1").innerHTML += one;
-            //näytä äänet
-        }
+    const vote = {
+        name: nimi,
+        options: [
+            {
+                valinta1: vaihto1,
+                votes: 0
+            },
+            {
+                valinta2: vaihto2,
+                votes: 0
+            }
+        ]
     }
+votes.push(vote)  
 
+
+} /***/
+
+
+
+/**function vote() {
+    
 }
 
+function poista() {         
+//later - etsi nimellä ja poista 
 
-function vote() {
-    //äänet + 1
-}
-
-function poista() {         //later
-
-}
+} */
 

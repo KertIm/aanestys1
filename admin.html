@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style1.css" />
+    <title>Äänestykset</title>
+    <link rel="stylesheet" href="admin.css" />
 </head>
 
 <body>
-    <script src="./logout.js"></script>
+    <script src="./login.js"></script>
     <script src="./script.js"></script>
 
     <h1 id="name">Äänestykset</h1>
@@ -26,9 +26,12 @@
             <!-- Modal content -->
             <div class="modal-content">
                 <button id="sulje" type="button" onclick="sulje()">X</button>
-                <p id="teksti">Äänestys:</p><br>
+                <p id="teksti">Äänestyksen nimi:</p><br>
 
                 <input type="text" placeholder="Äänestys" id="aanestys"><br>
+                <!--vaihto ehdot-->
+                <input type="text" placeholder="Vaihtoehto 1:" id="vaihto1"><br>
+                <input type="text" placeholder="Vaihtoehto 2:" id="vaihto2"><br>
 
                 <button id="lisaa2" type="button" onclick="lisaa()">Lisää äänestys</button>
             </div>
@@ -38,14 +41,14 @@
         <button id="poista" type="button" onclick="poista()">Poista äänestyksiä</button>
         
     </div>
-    <div id="content" >  <!--äänestykset ku on lisätty, muuten piilota-->
-        <!--nimi ja äänet--- ehkä lisatietoja-->
+    <div id="content" > 
+        <!--nimi ja äänet--- -->
         
         <span id="teksti1"></span><br>
         <p>Äänet: <span id="teksti2">0</span></p>
         <button id="vote" type="button" onclick="vote()">Äänestä</button>
     </div>
-
+    
 
     
 </body>

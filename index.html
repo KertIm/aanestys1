@@ -4,31 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <title>Etusivu</title>
   </head>
   <body>
     <script src="./login.js"></script>
     
-    <div class="container">
-      <h1>Kirjaudu sisään</h1>
-      <form name="form" onsubmit="validateForm()" id="form"></form>
+    <input id="kirjaudu" type="submit" value="Kirjaudu" onclick="kirjaudu()" />
 
-        <label for="username">Käyttäjänimi</label>
-        <input type="text" id="username" />
-        <!--<span id="username" style="color: red;"></span>
-        <span id="username1" style="color: green;"></span>-->
-
-        <label for="password">Salasana</label>
-        <input type="password" id="password" />
-        <!--<span id="password" style="color: red;"></span>
-        <span id="password1" style="color: green;"></span> -->
-
-        <!-- <input type="submit" class="login-btn" value="Login" />-->
-        <input id="send" type="submit" value="Kirjaudu sisään" onclick="validateForm()" /> 
-      </form>
+    <h1>Äänestykset</h1>
+      
+    <div id="content" >  
+      <!--nimi ja äänet-->
+      
+      <span id="teksti1"></span><br>
+      <p>Äänet: <span id="teksti2">0</span></p>
+      <button id="vote" type="button" onclick="vote()">Äänestä</button>
     </div>
-    
+
     <img id="imageFlowers" src="kuvat/flowers.png" >
 
   </body>
