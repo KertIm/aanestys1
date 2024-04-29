@@ -79,21 +79,20 @@ body {
     margin-left: 80%;
     margin-top: -200px;
 }
-#vote{
+#votes{
     cursor: pointer;
     text-align: center;
     background: var(--box);
     color: var(--text);
-    font-size: 16px;
+    font-size: 12px;
     font-family: 'Anton', sans-serif;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     border-radius: 18px;
     border-color: var(--text);
     cursor: pointer;
-    margin-top: 10px;
 }
 #content {  /*piilota alussa*/
     background-color: var(--cont);

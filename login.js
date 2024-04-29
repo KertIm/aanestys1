@@ -9,6 +9,7 @@ const password = document.getElementById("password").value;
         window.location.href = "admin.html"
         return true
     } else {
+        alert("Väärä käyttäjänimi tai salasana!")
         return false
     }
 

@@ -29,15 +29,41 @@ function lisaa() {
             }
         ]
     }
-votes.push(vote)  
+    votes.push(vote)  
 
+    
+    var nayta = document.getElementById("content");
+    nayta.style.display = "block";
+            
 
+    document.getElementById("teksti1").innerHTML = vote.name;
+    document.getElementById("teksti2").innerHTML = vote.valinta1 + ": Äänet: " + vote.votes;
+    document.getElementById("teksti3").innerHTML = vote.valinta2 + ": Äänet: " + vote.votes;
+      
+
+    document.getElementById("demo").innerHTML = " 1. " + vote.name + " 2. " + vote.options 
+    + " 3. " + vote.valinta1;
+
+    sulje();
+    //nayta();
 } /***/
 
+/*function nayta() {
+    
+            
+    document.getElementById("teksti1").innerHTML = vote.name;
+    document.getElementById("teksti2").innerHTML = vote.valinta1 + ": Äänet: " + vote.votes;
+    document.getElementById("teksti3").innerHTML = vote.valinta2 + ": Äänet: " + vote.votes;
+      
+
+    document.getElementById("demo").innerHTML = " 1. " + vote.name + " 2. " + vote.options 
+    + " 3. " + vote.valinta1;* 
+}*/
 
 
 /**function vote() {
-    
+    //aanet = aanet + 1;
+    //document.getElementById("teksti2").innerText= aanet; 
 }
 
 function poista() {         
