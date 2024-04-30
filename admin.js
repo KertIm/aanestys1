@@ -8,19 +8,26 @@ if (localStorage.getItem("votes")) {
 
 function vote(event) {
     console.log(event.target)
+
     if (event.target.tagName === "BUTTON") {
-        const voteid = event.target.dataset.voteid;
-        const optionid = event.target.dataset.optionid;
-        votes[voteid].options[optionid].votes++;
-        console.log(votes)
-        saveVotes();
-        renderVotes();
-    } else if (event.target.tagName === "button") {    //poistaminen
-        //const poistaId = event.target.dataset.poistaId;
-        //const poistettavaId = event.target.dataset.poistettavaId;
-        //votes[poistaId].options[poistettavaId].votes++;
-        //votes.splice(poistettavaId, poistettavaId + 1);
-        
+        const btn = event.target;
+        if (btn.getAttribute('data-poista-id')){
+            console.log("Poistetaan");
+            const poistaId = btn.getAttribute('data-poista-id');
+            votes.splice(poistaId, 1);
+            saveVotes();
+            renderVotes();
+            return;
+        } else {
+            console.log("Äänestetään");
+
+            const voteid = event.target.dataset.voteid;
+            const optionid = event.target.dataset.optionid;
+            votes[voteid].options[optionid].votes++;
+            console.log(votes)
+            saveVotes();
+            renderVotes();
+        } 
     }
 }
 
@@ -65,16 +72,9 @@ function renderVotes() {
         })
 
             //poistaminen
-        
-            let poistaId = 0;
-            let poistettavaId = 0;
             
             const button = document.createElement("button");
-            
-            button.dataset.poistaId = poistaId;
-            button.dataset.poistettavaId = poistettavaId;
-            poistettavaId++;
-
+            button.dataset.poistaId = voteid;
             button.innerText = "Poista";
             div.appendChild(button);
 
