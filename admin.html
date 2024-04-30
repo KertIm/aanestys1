@@ -7,21 +7,14 @@
     <title>Äänestykset</title>
     <link rel="stylesheet" href="admin.css" />
 </head>
-
 <body>
-
-
-    <h1 id="name">Äänestykset</h1>
     <input id="KUlos" type="submit" value="Kirjaudu ulos" onclick="KUlos()" />
-    <!--käyttäjä    selaa äänestyksiä       valitse äänestys ja katso tilanne   -   valitse äänestys ja äänestä-->
-
-    <!--admin-->
+    <h1 id="name">Äänestykset</h1>
+    
     <div id="valinnat">
         <button id="lisaa" type="button" onclick="avaa()">Lisää äänestys</button>
-
         <!-- The Modal -->
         <div id="myModal" class="modal">
-
             <!-- Modal content -->
             <div class="modal-content">
                 <button id="sulje" type="button" onclick="sulje()">X</button>
@@ -29,22 +22,16 @@
 
                 <input type="text" placeholder="Äänestys" id="aanestys"><br>
                 <!--vaihto ehdot-->
+                <p class="aanestysValinnat">Äänestyksen valinnat:</p><br>
                 <input type="text" placeholder="Vaihtoehto 1:" id="vaihto1"><br>
                 <input type="text" placeholder="Vaihtoehto 2:" id="vaihto2"><br>
 
                 <button id="lisaa2" type="button" onclick="lisaa()">Lisää äänestys</button>
             </div>
-
-        </div>
-
-        
+        </div>  
     </div>
-    <div id="content">         
-    </div>
-    
+    <div id="content"></div>
 </body>
-
-<script src="./login.js"></script>
-<script src="./admin.js"></script>
-
+    <script src="./login.js"></script>
+    <script src="./admin.js"></script>
 </html>

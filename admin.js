@@ -5,7 +5,6 @@ if (localStorage.getItem("votes")) {
     votes = JSON.parse(localStorage.getItem("votes"));
     renderVotes();
 }
-
 function vote(event) {
     console.log(event.target)
 
@@ -30,18 +29,14 @@ function vote(event) {
         } 
     }
 }
-
 function saveVotes() {
     localStorage.setItem("votes", JSON.stringify(votes));
 }
-
 function renderVotes() {
     var nayta = document.getElementById("content");
     nayta.innerHTML = "";
     let voteid = 0;
     
-    
-
     votes.forEach(vote => {
         const div = document.createElement("div");
         
@@ -70,21 +65,16 @@ function renderVotes() {
             const br = document.createElement("br");
             div.appendChild(br);
         })
-
             //poistaminen
-            
             const button = document.createElement("button");
             button.dataset.poistaId = voteid;
             button.innerText = "Poista";
             div.appendChild(button);
 
-
         voteid++;
-
         nayta.appendChild(div);
     })
 }
-
 function avaa() {
     var modal = document.getElementById("myModal");
 
@@ -95,7 +85,6 @@ function sulje() {
 
     modal.style.display = "none";
 }
-
 function lisaa() {
     var nimi = document.getElementById("aanestys").value;
     var vaihto1 = document.getElementById("vaihto1").value;
@@ -119,8 +108,5 @@ function lisaa() {
     localStorage.setItem("votes", JSON.stringify(votes));
 
     renderVotes();
-    
     sulje();
-    
 }
-
