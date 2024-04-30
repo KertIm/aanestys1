@@ -15,6 +15,12 @@ function vote(event) {
         console.log(votes)
         saveVotes();
         renderVotes();
+    } else if (event.target.tagName === "button") {    //poistaminen
+        //const poistaId = event.target.dataset.poistaId;
+        //const poistettavaId = event.target.dataset.poistettavaId;
+        //votes[poistaId].options[poistettavaId].votes++;
+        //votes.splice(poistettavaId, poistettavaId + 1);
+        
     }
 }
 
@@ -26,6 +32,8 @@ function renderVotes() {
     var nayta = document.getElementById("content");
     nayta.innerHTML = "";
     let voteid = 0;
+    
+    
 
     votes.forEach(vote => {
         const div = document.createElement("div");
@@ -55,6 +63,22 @@ function renderVotes() {
             const br = document.createElement("br");
             div.appendChild(br);
         })
+
+            //poistaminen
+        
+            let poistaId = 0;
+            let poistettavaId = 0;
+            
+            const button = document.createElement("button");
+            
+            button.dataset.poistaId = poistaId;
+            button.dataset.poistettavaId = poistettavaId;
+            poistettavaId++;
+
+            button.innerText = "Poista";
+            div.appendChild(button);
+
+
         voteid++;
 
         nayta.appendChild(div);
@@ -97,25 +121,6 @@ function lisaa() {
     renderVotes();
     
     sulje();
-    //nayta();
-} /***/
-
-/*function nayta() {
     
-            
-    document.getElementById("teksti1").innerHTML = vote.name;
-    document.getElementById("teksti2").innerHTML = vote.valinta1 + ": Äänet: " + vote.votes;
-    document.getElementById("teksti3").innerHTML = vote.valinta2 + ": Äänet: " + vote.votes;
-      
-
-    document.getElementById("demo").innerHTML = " 1. " + vote.name + " 2. " + vote.options 
-    + " 3. " + vote.valinta1;* 
-}*/
-
-
-/**
-function poista() {         
-//later - etsi nimellä ja poista 
-
-} */
+}
 
